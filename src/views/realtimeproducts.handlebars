@@ -1,0 +1,162 @@
+<div id="dynamic-list" class="row">
+  {{#each products}}
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src={{thumbnails}} alt="" />
+        <div class="card-body">
+          <h2 class="card-title">{{title}}</h2>
+          <p class="card-text">{{description}}</p>
+          <p class="card-text">ID: {{id}}</p>
+          <p class="card-text">Código: {{code}}</p>
+          <p class="card-text">Categoría: {{category}}</p>
+          <p class="card-text">Stock: {{stock}}</p>
+          <p class="card-text">Precio: ${{price}}</p>
+          <p class="card-text">Status: {{status}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<div id="dynamic-list" class="row">
+  {{#each limitedProducts}}
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src={{thumbnails}} alt="" />
+        <div class="card-body">
+          <h2 class="card-title">{{title}}</h2>
+          <p class="card-text">{{description}}</p>
+          <p class="card-text">ID: {{id}}</p>
+          <p class="card-text">Código: {{code}}</p>
+          <p class="card-text">Categoría: {{category}}</p>
+          <p class="card-text">Stock: {{stock}}</p>
+          <p class="card-text">Precio: ${{price}}</p>
+          <p class="card-text">Status: {{status}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<div id="dynamic-list" class="row">
+  {{#each productById}}
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src={{thumbnails}} alt="" />
+        <div class="card-body">
+          <h2 class="card-title">{{title}}</h2>
+          <p class="card-text">{{description}}</p>
+          <p class="card-text">ID: {{id}}</p>
+          <p class="card-text">Código: {{code}}</p>
+          <p class="card-text">Categoría: {{category}}</p>
+          <p class="card-text">Stock: {{stock}}</p>
+          <p class="card-text">Precio: ${{price}}</p>
+          <p class="card-text">Status: {{status}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<div class="forms-container">
+  <form id="addProductForm" class="form-container">
+    <h2>Agregar Producto</h2>
+    <div class="form-group">
+      <label for="titleProd">Título</label>
+      <input
+        type="text"
+        name="title"
+        id="titleProd"
+        class="form-control"
+        placeholder="Título"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="descProd">Descripción</label>
+      <input
+        type="text"
+        name="description"
+        id="descProd"
+        class="form-control"
+        placeholder="Descripción"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="catProd">Categoría</label>
+      <input
+        type="text"
+        name="category"
+        id="catProd"
+        class="form-control"
+        placeholder="Categoría"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="priceProd">Precio</label>
+      <input
+        type="number"
+        name="price"
+        id="priceProd"
+        class="form-control"
+        placeholder="Precio"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="codeProd">Código</label>
+      <input
+        type="text"
+        name="code"
+        id="codeProd"
+        class="form-control"
+        placeholder="Código"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="urlInput">URL</label>
+      <input
+        type="url"
+        name="url"
+        id="urlInput"
+        class="form-control"
+        placeholder="URL"
+      />
+    </div>
+    <div class="form-group">
+      <label for="stockProd">Stock</label>
+      <input
+        type="number"
+        name="stock"
+        id="stockProd"
+        class="form-control"
+        placeholder="Stock"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar</button>
+  </form>
+
+  <form id="deleteProductForm" class="form-container">
+    <h2>Eliminar Producto</h2>
+    <div class="form-group">
+      <label for="productId">ID del Producto</label>
+      <input
+        type="number"
+        id="productId"
+        name="productId"
+        class="form-control"
+        placeholder="ID del Producto"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+  </form>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/test-socket.js"></script>

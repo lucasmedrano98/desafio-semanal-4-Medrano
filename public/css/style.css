@@ -1,0 +1,98 @@
+/* Estilos personalizados para las tarjetas */
+.card {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.card .card-img-top {
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Estilos personalizados para los form*/
+.form-container {
+  max-width: 400px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-container .form-group {
+  margin-bottom: 15px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-container input[type="number"],
+.form-container input[type="text"],
+.form-container input[type="url"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s;
+}
+
+.form-container input[type="number"]:focus,
+.form-container input[type="text"]:focus,
+.form-container input[type="url"]:focus {
+  outline: none;
+  border-color: #7a8ce3;
+}
+
+.form-container .btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-container .btn-primary {
+  background-color: #7a8ce3;
+  color: #fff;
+}
+
+.form-container .btn-danger {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.form-container .btn-primary:hover,
+.form-container .btn-danger:hover {
+  background-color: #5969d6;
+}
+
+.forms-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .forms-container {
+    flex-wrap: wrap;
+  }
+  .form-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
